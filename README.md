@@ -15,10 +15,10 @@ A lightweight, cross-platform password analysis tool that checks your passwords 
 ```
 /Mac-App
 ├── NISTPassChecker.app        → Prebuilt macOS app
-├── password_checker_gui.py    → GUI script for Mac users
+├── password.py    → GUI script for Mac users
 
 /Source
-├── password_checker_gui.py    → Full source code
+├── password.py    → Full source code
 ├── password.spec              → PyInstaller build config
 ├── build/                     → Temporary build files
 ├── dist/                      → Output folder for .app/.exe
@@ -62,7 +62,7 @@ pip install pyinstaller Pillow
 pyinstaller --onefile --windowed \
   --icon=secpass.icns \
   --name NISTPassChecker \
-  password_checker_gui.py
+  password.py
 ```
 
 Your `.app` will appear in the `dist/` folder.
@@ -82,7 +82,7 @@ pip install pyinstaller
 pyinstaller --onefile --windowed ^
   --icon="securepass.ico" ^
   --name NISTPassChecker ^
-  password_checker_gui.py
+  password.py
 ```
 
 Your `.exe` will appear in the `dist/` folder.
