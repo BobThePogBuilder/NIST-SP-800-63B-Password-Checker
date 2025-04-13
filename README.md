@@ -99,6 +99,42 @@ Your `.exe` will appear in the `dist/` folder.
 
 ---
 
+
+## 🔐 How Breach Checks Work (HIBP)
+
+This app uses the [Have I Been Pwned API](https://haveibeenpwned.com/API/v3#SearchingPwnedPasswordsByRange) with k-anonymity for secure breach detection.
+
+## 🔒 What that means:
+- Your password is **never sent** to the API or over the internet.
+- It is **hashed locally using SHA-1** (secure hashing algorithm).
+- Only the **first 5 characters** of the hash are sent to the HIBP server.
+- HIBP returns a list of suffixes and counts for potential matches.
+- The app compares the suffix locally to check if your password was found in breaches.
+
+This method ensures:
+- ✅ High security
+- ✅ Complete privacy
+- ✅ Real-world breach validation
+
+### 🔢 Hashing Process (Example in Python)
+```python
+import hashlib
+
+password = "MySecurePass123!"
+sha1 = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
+prefix = sha1[:5]
+suffix = sha1[5:]
+```
+
+Then the app makes a request to:
+```
+https://api.pwnedpasswords.com/range/{prefix}
+```
+
+The returned data is parsed and compared to the `suffix` to check for any matches in known data breaches.
+
+
+
 ## 🧾 License
 
 This project is licensed under the **GNU General Public License v3.0 (GPLv3)**.
