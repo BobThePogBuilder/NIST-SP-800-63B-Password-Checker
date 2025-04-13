@@ -33,7 +33,8 @@ A lightweight, cross-platform password analysis tool that checks your passwords 
 ### ✅ Option 1: Use the Prebuilt `.app`
 
 1. Navigate to `/Mac-App`
-2. Open `NISTPassChecker.app`
+2. Git Clone
+3. Open `NISTPassChecker.app`
 
 > 🛑 If blocked by Gatekeeper:
 > - Right-click → Open  
