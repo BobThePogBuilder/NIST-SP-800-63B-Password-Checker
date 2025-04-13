@@ -1,0 +1,4 @@
+([('password',
+   '/Users/ahmadzaisellab/Desktop/NIST Special Publication 800-63B Complient '
+   'Password Strength checker/dist/password',
+   'EXECUTABLE')],)
