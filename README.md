@@ -36,7 +36,7 @@ A lightweight, cross-platform password analysis tool that checks your passwords 
 >   ```bash
 >   https://github.com/BobThePogBuilder/NIST-SP-800-63B-Password-Checker.git
 >   ```
-2. Open `NISTPassChecker.app`
+2. Open `NISTPassChecker.app` from the Mac-App Folder
 
 > 🛑 If blocked by Gatekeeper:
 > - Right-click → Open  
